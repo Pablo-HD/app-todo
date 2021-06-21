@@ -1,6 +1,6 @@
 import React from "react";
 import TextField from "@material-ui/core/TextField";
-import useInputState from "./useInputState";
+import useInputState from "./Helpers/useInputState";
 
 const TodoForm = ({ saveTodo }) => {
   const { value, reset, onChange } = useInputState();

@@ -5,7 +5,7 @@ import Dialog from "@material-ui/core/Dialog";
 import DialogActions from "@material-ui/core/DialogActions";
 import DialogTitle from "@material-ui/core/DialogTitle";
 
-export default function AlertDialog({ todos, deleteTodo, todo, index }) {
+export default function AlertDialog({ index, deleteTodo }) {
   const [open, setOpen] = React.useState(false);
 
   const remove = (index, deleteTodo) => {
@@ -39,7 +39,11 @@ export default function AlertDialog({ todos, deleteTodo, todo, index }) {
           <Button onClick={handleClose} color="primary">
             Cancelar
           </Button>
-          <Button onClick={remove} color="primary" autoFocus>
+          <Button
+            onClick={() => remove(index, deleteTodo)}
+            color="primary"
+            autoFocus
+          >
             Sim
           </Button>
         </DialogActions>
